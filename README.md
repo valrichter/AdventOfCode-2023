@@ -4,3 +4,4 @@
 - [Day 02](https://adventofcode.com/2023/day/2)
 - [Day 03](https://adventofcode.com/2023/day/3)
 - [Day 04](https://adventofcode.com/2023/day/4)
+- [Day 05](https://adventofcode.com/2023/day/5)
