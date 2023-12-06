@@ -99,6 +99,7 @@ func setRaces(lines []string) []Race {
 func totalWaysToWinTheRace(race Race) int {
 	totalWays := 0
 
+	max := 0
 	for holdTime := 1; holdTime <= race.time; holdTime++ {
 		restDistance := race.time - holdTime
 		newRecord := holdTime * restDistance
@@ -106,6 +107,13 @@ func totalWaysToWinTheRace(race Race) int {
 		if newRecord > race.distance {
 			totalWays = totalWays + 1
 		}
+
+		// Quadratic solution
+		max = newRecord
+		if max > newRecord {
+			return totalWays
+		}
+
 	}
 	return totalWays
 }
