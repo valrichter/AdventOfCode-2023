@@ -6,6 +6,7 @@ import (
 	"regexp"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type Race struct {
@@ -23,8 +24,26 @@ func main() {
 	fmt.Println("Part 1: ", part1)
 
 	// Part 2
+	timeCode(lines)
 	part2 := Part2(lines)
 	fmt.Println("Part 2: ", part2)
+}
+
+func timeCode(lines []string) {
+	// Registra el tiempo antes de ejecutar el código
+	startTime := time.Now()
+
+	// Código que deseas medir
+	Part2(lines)
+
+	// Registra el tiempo después de ejecutar el código
+	endTime := time.Now()
+
+	// Calcula la diferencia de tiempo
+	elapsedTime := endTime.Sub(startTime)
+
+	// Imprime el tiempo transcurrido
+	fmt.Printf("Tiempo transcurrido: %s\n", elapsedTime)
 }
 
 func Part2(lines []string) int {
