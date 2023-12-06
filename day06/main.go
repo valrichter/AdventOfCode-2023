@@ -118,6 +118,16 @@ func setRaces(lines []string) []Race {
 func totalWaysToWinTheRace(race Race) int {
 	totalWays := 0
 
+	//TODO:Quadratic formula
+	/*
+			  x * (t - x) = d => x² - tx + d = 0 where:
+
+		    x is time spent holding the button.
+
+		    t is the duration of the race.
+
+		    d is the record distance.
+	*/
 	max := 0
 	for holdTime := 1; holdTime <= race.time; holdTime++ {
 		restDistance := race.time - holdTime
